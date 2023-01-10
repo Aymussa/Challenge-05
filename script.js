@@ -93,14 +93,14 @@ let passwordlen=0
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-
-  if (confirm ("Would you like to have UPPER CASE Characters? choose between 8-64!"));
+//prompts user to input the amount of character
+  if (confirm ("How many characters do you want in your password? choose between 10-64!"));
   if (!enter) {
     alert("This needs a value");
-} else if (enter < 8 || enter > 128) {
+} else if (enter < 10 || enter > 64) {
     // Validates user input
     // Start user input prompts
-    enter = parseInt(prompt("You must choose between 8 and 64!"));{
+    enter = parseInt(prompt("You must choose between 10 and 64!"));{
   passwordArray=passwordArray.concat(upperCasedCharacters)}
 
     }
