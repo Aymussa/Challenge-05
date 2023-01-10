@@ -103,24 +103,26 @@ function getRandom(arr) {
 
 }
 
-// Function to generate password with user input
+// Function to generate password with user input (this will start the process)
 function generatePassword() {
   //prompts user to input the amount of character
 
   if (confirm ("How many characters do you want in your password? choose between 10-64!"));
-  if (!enter) {
-    alert("This needs a value");
-} else if (enter < 10 || enter > 64) {
+
     // Validates user input
+    else (!enter); {
+
+  
     // Start user input prompts
-    enter = parseInt(prompt("You must choose between 10 and 64!"));{
-  passwordArray=passwordArray.concat(upperCasedCharacters)}
+
+    confirmNumber = confirm("Would you like to use numbers in your password?");
+    confirmCharacter = confirm("Would you like to use special characters in your password?");
+    confirmUppercase = confirm("Would you like to use uppercase characters in your password?");
+    confirmLowercase = confirm("Would you like to use lowercase characters in your password?");
 
     }
+  }
 
-
-
-}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
