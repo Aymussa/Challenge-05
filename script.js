@@ -93,7 +93,20 @@ let passwordlen=0
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-//prompts user to input the amount of character
+
+}
+
+// Function for getting a random element from an array
+function getRandom(arr) {
+
+
+
+}
+
+// Function to generate password with user input
+function generatePassword() {
+  //prompts user to input the amount of character
+
   if (confirm ("How many characters do you want in your password? choose between 10-64!"));
   if (!enter) {
     alert("This needs a value");
@@ -104,19 +117,6 @@ function getPasswordOptions() {
   passwordArray=passwordArray.concat(upperCasedCharacters)}
 
     }
-}
-
-// Function for getting a random element from an array
-function getRandom(arr) {
-
-  let upperCasedCharacters
-
-
-}
-
-// Function to generate password with user input
-function generatePassword() {
-
 
 
 
