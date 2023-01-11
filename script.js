@@ -93,21 +93,29 @@ let passwordlen=0;
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-if(confirm(confirmNumber)){
+// get the users number of characters
+// window.prompt
+window.prompt ("How many characters do you want in your password? choose between 10-64!");
+
+if(window.confirm("Would you like to use numbers in your password?")){
   passwordArray=passwordArray.concat(numericCharacters);
+  console.log(passwordArray)
   
 }
-if(confirm(confirmCharacter)){
+if(window.confirm("Would you like to use special characters in your password?")){
   passwordArray=passwordArray.concat(specialCharacters);
-  
+  console.log(passwordArray)
+
 }
-if(confirm(confirmLowercase)){
+if(window.confirm("Would you like to use lowercase characters in your password?")){
   passwordArray=passwordArray.concat(lowerCasedCharacters);
-  
+  console.log(passwordArray)
+
 }
-if(confirm(confirmUppercase)){
+if(window.confirm("Would you like to use uppercase characters in your password?")){
   passwordArray=passwordArray.concat(upperCasedCharacters);
-  
+    console.log(passwordArray)
+
 }
 }
 
@@ -119,20 +127,11 @@ function getRandom(arr) {
 
 // Function to generate password with user input (this will start the process)
 function generatePassword() {
-  //prompts user to input the amount of character
 
-  if (confirm ("How many characters do you want in your password? choose between 10-64!"));
+  getPasswordOptions()
 
-   {
 
-  
-    // Start user input prompts
-
-    confirmNumber = confirm("Would you like to use numbers in your password?");
-    confirmCharacter = confirm("Would you like to use special characters in your password?");
-    confirmUppercase = confirm("Would you like to use uppercase characters in your password?");
-    confirmLowercase = confirm("Would you like to use lowercase characters in your password?");
-    }
+   
   }
 
 
