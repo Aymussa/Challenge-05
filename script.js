@@ -89,16 +89,30 @@ var upperCasedCharacters = [
 ];
 
 let passwordArray=[];
-let passwordlen=0
+let passwordlen=0;
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-
+if(confirm(confirmNumber)){
+  passwordArray=passwordArray.concat(numericCharacters);
+  
+}
+if(confirm(confirmCharacter)){
+  passwordArray=passwordArray.concat(specialCharacters);
+  
+}
+if(confirm(confirmLowercase)){
+  passwordArray=passwordArray.concat(lowerCasedCharacters);
+  
+}
+if(confirm(confirmUppercase)){
+  passwordArray=passwordArray.concat(upperCasedCharacters);
+  
+}
 }
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
 
 
 }
@@ -109,8 +123,7 @@ function generatePassword() {
 
   if (confirm ("How many characters do you want in your password? choose between 10-64!"));
 
-    // Validates user input
-    else (!enter); {
+   {
 
   
     // Start user input prompts
@@ -119,7 +132,6 @@ function generatePassword() {
     confirmCharacter = confirm("Would you like to use special characters in your password?");
     confirmUppercase = confirm("Would you like to use uppercase characters in your password?");
     confirmLowercase = confirm("Would you like to use lowercase characters in your password?");
-
     }
   }
 
