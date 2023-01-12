@@ -89,15 +89,19 @@ var upperCasedCharacters = [
 ];
 
 let passwordArray=[];
-let passwordlength=0;
+let characterNumber="";
 
 // Function to prompt user for password options
 function getPasswordOptions() {
 // get the users number of characters
+
+
 // window.prompt
 let characterNumber = prompt ("How many characters do you want in your password? choose between 10-64!");
 if (characterNumber <10 || characterNumber >64){
   alert ("Please choose between 10-64! characters")
+  return;
+
 }
 
 if (window.confirm("Would you like to use numbers in your password?")){
@@ -124,25 +128,28 @@ if(window.confirm("Would you like to use uppercase characters in your password?"
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-//   for (var i = 0; i < enter; i++) {
-//     var pickChoices = [Math.floor(Math.random() * choices.length)];
-//     password.push(pickChoices);
-for (let index = 0; index < array.length; index++) {
-  const element = array[index];
-  
+  let randomGen = passwordArray [Math.floor(Math.random()*characterNumber)];
+  let passwordArray = arr[ randomGen]
+  return passwordArray
 }
 
-}
+
 
 
 // Function to generate password with user input (this will start the process)
 function generatePassword() {
 
   getPasswordOptions()
+let result = "";
+for (let i = 0; i < characterNumber; i++) {
+  result += getRandom(passwordArray);
+}
 
-
+var passwordText = document.querySelector('#password');
+passwordText.value = result;
+}
    
-  }
+
 
 
 // Get references to the #generate element
